@@ -26,7 +26,7 @@ def PigmentRatioToGroups(pigment_data, chl_varname):
     cyano_prochlor_contribution=(0.86*DP_subset['Zea'])/DP_estimated_tchla
     Gflag_prochlor_contribution=(1.01*DP_subset['TChlb'])/DP_estimated_tchla
 
-    log_Tchl_est_offset=np.log10(Chl)-np.log10(estimated_tchla)
+    log_Tchl_est_offset=np.log10(Chl)-np.log10(DP_estimated_tchla)
 
     Groups=pd.DataFrame({'Diatoms': diatom_contribution, 'Dinoflag':dinoflag_contribution,'cyano_prochlor':cyano_prochlor_contribution, 'log_chl_mismatch': log_Tchl_est_offset})
 
